@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h2>Happy New Year 2023</h2>
+    </section>
+
+    <div id="goddess-laxmi"></div>
+
+    <audio autoplay loop>
+        <source src="audio_file.mp3">
+    </audio>
+
+    <script>
+        function changeBg(){
+
+        const images = [
+        'url(flower.jpg)',
+            'url(dancing.jpg)',
+            'url(farm.jpg)',
+            'url(river.jpg)',
+            'url(road.webp)',
+            'url(university.webp)'
+        ]
+
+            const section = document.querySelector('section');
+            const bg = images[Math.floor(Math.random() * images.length)];
+            section.style.backgroundImage = bg;
+        }
+
+        setInterval(changeBg, 1000)
+
+</script>
+</body>
+</html>
